@@ -1,12 +1,9 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
-const Nightmare = require('nightmare');
+import axios from 'axios';
+import cheerio from 'cheerio';
+import Nightmare from 'nightmare';
 const nightmare = Nightmare({ show: true });
 
-const app = document.getElementById("master-container");
-app.innerHTML = '<button onclick="run()">Find</button>';
-
-window.getUsers = () => {
+export const getUsers = () => {
 	console.log('tester');
     
 	Nightmare.action('scrollIntoView', function(selector, done) {
